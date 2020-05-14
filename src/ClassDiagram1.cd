@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BaseScene1">
+    <Position X="1.25" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~BaseScene1" Hidden="true" />
+      <Method Name="BaseScene1" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAhQAAAAAIQAAAAAAACABAAAADAAAAACiAAABAAA=</HashCode>
+      <FileName>AustEngine\UserFull\BaseScene1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseScene2">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~BaseScene2" Hidden="true" />
+      <Method Name="BaseScene2" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAgQAAAAAQQAAAACAACABAAAADAAAAACiAAABAAA=</HashCode>
+      <FileName>AustEngine\UserFull\BaseScene2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BaseScene3">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~BaseScene3" Hidden="true" />
+      <Method Name="BaseScene3" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAgQAAAAAgQAAAAAAACABAAAADAAAAACiAABBAAA=</HashCode>
+      <FileName>AustEngine\UserFull\BaseScene3.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoseScene">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~LoseScene" Hidden="true" />
+      <Method Name="LoseScene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAAAAgAAAAAAAQIEAAAAAAAAABAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\LoseScene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="hack" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PauseScene">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~PauseScene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="PauseScene" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAQIEAAAAAAAACAAAAAAAABAgAAAAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\PauseScene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="hack" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StartScene">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~StartScene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="StartScene" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAgAAAQJEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\StartScene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="hack" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WinScene">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="~WinScene" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="WinScene" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAiAAAIAAAQIEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\WinScene.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="hack" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Scene" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAEgAAQAQAAwQkoAAAAAAAQCQAAABAQAAqgAIAAAQ=</HashCode>
+      <FileName>AustEngine\AustEngine\Scene\Scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RestartHack">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="~RestartHack" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="RestartHack" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAgAABAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\RestartHack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnpauseHack">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="~UnpauseHack" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="UnpauseHack" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAAAgAABAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\UnpauseHack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartHack">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="~StartHack" Hidden="true" />
+      <Method Name="operator=" Hidden="true" />
+      <Method Name="StartHack" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAgAABAAAA=</HashCode>
+      <FileName>AustEngine\UserFull\StartHack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

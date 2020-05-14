@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3167A812-5D2C-4EE9-ACFD-F0E959384755}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>spinnycube</RootNamespace>
+    <ProjectName>AustEngine</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)extern\glfw-2.7.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)_Debug</TargetName>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+    <EnableManagedIncrementalBuild>true</EnableManagedIncrementalBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SolutionDir)include;$(SolutionDir)extern\glfw-2.7.6\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)lib;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\</OutDir>
+    <IntDir>$(ProjectName)_$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)dist\Math\include;$(SolutionDir)dist\SB6\include;$(SolutionDir)dist\GLFW\include;$(SolutionDir)dist\File\include;$(SolutionDir)dist\AzulCore\include</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SDLCheck>
+      </SDLCheck>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <OpenMPSupport>false</OpenMPSupport>
+      <UseUnicodeForAssemblerListing>false</UseUnicodeForAssemblerListing>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>MSVCRTD.lib</IgnoreSpecificDefaultLibraries>
+      <ShowProgress>NotSet</ShowProgress>
+      <LinkStatus>
+      </LinkStatus>
+      <TreatLinkerWarningAsErrors>true</TreatLinkerWarningAsErrors>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dist\AzulCore\include\AzulCore.h" />
+    <ClInclude Include="..\dist\AzulCore\include\AzulFileHdr.h" />
+    <ClInclude Include="..\dist\AzulCore\include\AzulHelper.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Camera.h" />
+    <ClInclude Include="..\dist\AzulCore\include\DebugOut.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Engine.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GpuVertTypes.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorByPosition.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTexture.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_ColorNoTextureLight.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_Sprite.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_SpriteBox.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureFlat.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_TextureLight.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeAutoColor.h" />
+    <ClInclude Include="..\dist\AzulCore\include\GraphicsObject_WireframeConstantColor.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Image.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Keyboard.h" />
+    <ClInclude Include="..\dist\AzulCore\include\LibrarySetup.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Model.h" />
+    <ClInclude Include="..\dist\AzulCore\include\ModelTools.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Mouse.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Rect.h" />
+    <ClInclude Include="..\dist\AzulCore\include\ShaderObject.h" />
+    <ClInclude Include="..\dist\AzulCore\include\Texture.h" />
+    <ClInclude Include="..\dist\AzulCore\include\TextureTGA.h" />
+    <ClInclude Include="..\dist\File\include\File.h" />
+    <ClInclude Include="..\dist\GLFW\include\GL\glfw.h" />
+    <ClInclude Include="..\dist\Math\include\Align16.h" />
+    <ClInclude Include="..\dist\Math\include\Constants.h" />
+    <ClInclude Include="..\dist\Math\include\Enum.h" />
+    <ClInclude Include="..\dist\Math\include\MathApp.h" />
+    <ClInclude Include="..\dist\Math\include\MathEngine.h" />
+    <ClInclude Include="..\dist\Math\include\Matrix.h" />
+    <ClInclude Include="..\dist\Math\include\Quat.h" />
+    <ClInclude Include="..\dist\Math\include\QuatApp.h" />
+    <ClInclude Include="..\dist\Math\include\Util.h" />
+    <ClInclude Include="..\dist\Math\include\Vect.h" />
+    <ClInclude Include="..\dist\Math\include\VectApp.h" />
+    <ClInclude Include="..\dist\SB6\include\arcball.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\gl3w.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glcorearb.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glext.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\glxext.h" />
+    <ClInclude Include="..\dist\SB6\include\GL\wglext.h" />
+    <ClInclude Include="..\dist\SB6\include\object.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6ext.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6ktx.h" />
+    <ClInclude Include="..\dist\SB6\include\sb6mfile.h" />
+    <ClInclude Include="..\dist\SB6\include\shader.h" />
+    <ClInclude Include="..\dist\SB6\include\vmath.h" />
+    <ClInclude Include="AustEngine\AustEngine\Camera Manager\CameraManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\AustEngine.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Attorneys\AABBAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Attorneys\BoxAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Attorneys\VisualizerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Attorneys\VolumeAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\CollisionVolume.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\CollisionVolumeAABB.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\CollisionVolumeBox.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\CollisionVolumeBSphere.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\CollisionVolumeOBB.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Commands\AABBColCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Commands\AABBCommandFactory.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Commands\BSphereColCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Commands\BSphereCommandFactory.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Commands\OBBColCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Commands\OBBCommandFactory.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\Visualizer.h" />
+    <ClInclude Include="AustEngine\AustEngine\Collision\VolumeType.h" />
+    <ClInclude Include="AustEngine\AustEngine\DoxygenData.h" />
+    <ClInclude Include="AustEngine\AustEngine\EngineAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Alarmable.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\AlarmableAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\AlarmableManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\CollisionAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\DrawableAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\GameObjectAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\InputableAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Attorneys\UpdatableAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Collidable.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\AlarmDeregistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\AlarmRegistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\CollideDeregistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\CollideRegistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionDispatch.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionDispatchBase.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestPairCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestSelfCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestTerrainCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\Command.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\DrawDeregistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\DrawRegistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\InputDeregistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\InputRegistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\SceneEnterCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\SceneExitCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\UpdateDeregistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Commands\UpdateRegistrationCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Drawable.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\EventType.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\GameObject.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Inputable.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Managers\AlarmableManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Managers\CollidableGroup.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Managers\CollisionManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Managers\DrawableManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Managers\UpdatableManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\RegState.h" />
+    <ClInclude Include="AustEngine\AustEngine\Game Object\Updatable.h" />
+    <ClInclude Include="AustEngine\AustEngine\Keyboard\KeyboardEventManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Keyboard\KeyEventManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\MathTools\MathTools.h" />
+    <ClInclude Include="AustEngine\AustEngine\ParticleSystem\Particle.h" />
+    <ClInclude Include="AustEngine\AustEngine\ParticleSystem\ParticleBurst.h" />
+    <ClInclude Include="AustEngine\AustEngine\ParticleSystem\ParticleEffect.h" />
+    <ClInclude Include="AustEngine\AustEngine\ParticleSystem\ParticleEmitter.h" />
+    <ClInclude Include="AustEngine\AustEngine\ParticleSystem\ParticleEmitterFactory.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\Attorneys\ImageManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\Attorneys\ModelManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\Attorneys\ParticleEffectManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\Attorneys\ShaderManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\Attorneys\SpriteFontManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\Attorneys\TextureManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\ColorVectors.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\ImageManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\ModelManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\ParticleEffectManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\ShaderManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\SpriteFontManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Resource Managers\TextureManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\Commands\SceneChangeCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\Commands\SceneCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\Commands\SceneNullCommand.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\Scene.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\SceneAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\SceneManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\SceneManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\SceneNull.h" />
+    <ClInclude Include="AustEngine\AustEngine\Scene\SceneRegistrationBroker.h" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\RapidXML\rapidxml.hpp" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\RapidXML\rapidxml_iterators.hpp" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\RapidXML\rapidxml_print.hpp" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\RapidXML\rapidxml_utils.hpp" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\Sprite.h" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\SpriteFont.h" />
+    <ClInclude Include="AustEngine\AustEngine\Sprite\SpriteString.h" />
+    <ClInclude Include="AustEngine\AustEngine\Storable\Storable.h" />
+    <ClInclude Include="AustEngine\AustEngine\Storable\StorableManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Terrain\TerrainIterator.h" />
+    <ClInclude Include="AustEngine\AustEngine\Terrain\TerrainManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Terrain\TerrainObjectManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\Terrain\TerrainObject.h" />
+    <ClInclude Include="AustEngine\AustEngine\Terrain\TerrainObjectManagerAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Terrain\TerrainRectArea.h" />
+    <ClInclude Include="AustEngine\AustEngine\Time Manager\FreezeTime.h" />
+    <ClInclude Include="AustEngine\AustEngine\Time Manager\TimeAttorney.h" />
+    <ClInclude Include="AustEngine\AustEngine\Time Manager\TimeManager.h" />
+    <ClInclude Include="AustEngine\AustEngine\UI Helper\UIHelper.h" />
+    <ClInclude Include="AustEngine\UserFull\BaseScene1.h" />
+    <ClInclude Include="AustEngine\UserFull\BaseScene2.h" />
+    <ClInclude Include="AustEngine\UserFull\BaseScene3.h" />
+    <ClInclude Include="AustEngine\UserFull\BossBulletFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBaseBullet.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBossBullet.h" />
+    <ClInclude Include="AustEngine\UserFull\Bullet.h" />
+    <ClInclude Include="AustEngine\UserFull\BulletFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\Enemy.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBase.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBoss.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBossFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBullet.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBulletFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyBaseFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyManager.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyManagerBaseState.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyManagerBossState.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyManagerState.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyRam.h" />
+    <ClInclude Include="AustEngine\UserFull\EnemyRamFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\GodCam.h" />
+    <ClInclude Include="AustEngine\UserFull\LoseBG.h" />
+    <ClInclude Include="AustEngine\UserFull\LoseScene.h" />
+    <ClInclude Include="AustEngine\UserFull\PauseBG.h" />
+    <ClInclude Include="AustEngine\UserFull\PauseScene.h" />
+    <ClInclude Include="AustEngine\UserFull\RestartHack.h" />
+    <ClInclude Include="AustEngine\UserFull\StartBG.h" />
+    <ClInclude Include="AustEngine\UserFull\StartHack.h" />
+    <ClInclude Include="AustEngine\UserFull\StartScene.h" />
+    <ClInclude Include="AustEngine\UserFull\Tank.h" />
+    <ClInclude Include="AustEngine\UserFull\TankFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\TankManager.h" />
+    <ClInclude Include="AustEngine\UserFull\TankTurret.h" />
+    <ClInclude Include="AustEngine\UserFull\Tree.h" />
+    <ClInclude Include="AustEngine\UserFull\TreeFactory.h" />
+    <ClInclude Include="AustEngine\UserFull\TreeManager.h" />
+    <ClInclude Include="AustEngine\UserFull\UnpauseHack.h" />
+    <ClInclude Include="AustEngine\UserFull\WallPlane.h" />
+    <ClInclude Include="AustEngine\UserFull\WinBG.h" />
+    <ClInclude Include="AustEngine\UserFull\WinScene.h" />
+    <ClInclude Include="AustEngine\UserFull\WorldPlane.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\dist\AzulCore\lib\AzulCore_Debug.lib" />
+    <Library Include="..\dist\File\lib\File_Debug.lib" />
+    <Library Include="..\dist\GLFW\lib\GLFW_Debug.lib" />
+    <Library Include="..\dist\Math\lib\MathEngine_Debug.lib" />
+    <Library Include="..\dist\SB6\lib\sb6_Debug.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AustEngine\AustEngine\Camera Manager\CameraManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\AustEngine.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\CollisionVolumeAABB.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\CollisionVolumeBSphere.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\CollisionVolumeOBB.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Commands\AABBColCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Commands\AABBCommandFactory.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Commands\BSphereColCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Commands\BSphereCommandFactory.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Commands\OBBColCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Commands\OBBCommandFactory.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Collision\Visualizer.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Alarmable.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Collidable.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestPairCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestSelfCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Commands\Collision Testing\CollisionTestTerrainCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Drawable.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\GameObject.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Inputable.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Managers\AlarmableManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Managers\CollidableGroup.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Managers\CollisionManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Managers\DrawableManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Managers\UpdatableManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Game Object\Updatable.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Keyboard\KeyboardEventManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Keyboard\KeyEventManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\MathTools\MathTools.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\ParticleSystem\ParticleBurst.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\ParticleSystem\ParticleEffect.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\ParticleSystem\ParticleEmitter.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\ParticleSystem\ParticleEmitterFactory.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\ColorVectors.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\ImageManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\ModelManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\ParticleEffectManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\ShaderManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\SpriteFontManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Resource Managers\TextureManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Scene\Commands\SceneChangeCommand.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Scene\Scene.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Scene\SceneManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Scene\SceneRegistrationBroker.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Sprite\Sprite.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Sprite\SpriteFont.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Sprite\SpriteString.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Storable\StorableManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Terrain\TerrainIterator.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Terrain\TerrainManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Terrain\TerrainObjectManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Terrain\TerrainObject.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Terrain\TerrainRectArea.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Time Manager\FreezeTime.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\Time Manager\TimeManager.cpp" />
+    <ClCompile Include="AustEngine\AustEngine\UI Helper\UIHelper.cpp" />
+    <ClCompile Include="AustEngine\UserDefined\AustEnd.cpp" />
+    <ClCompile Include="AustEngine\UserDefined\AustInitialize.cpp" />
+    <ClCompile Include="AustEngine\UserDefined\LoadResources.cpp" />
+    <ClCompile Include="AustEngine\UserDefined\StorableRecreateScene.cpp" />
+    <ClCompile Include="AustEngine\UserFull\BaseScene1.cpp" />
+    <ClCompile Include="AustEngine\UserFull\BaseScene2.cpp" />
+    <ClCompile Include="AustEngine\UserFull\BaseScene3.cpp" />
+    <ClCompile Include="AustEngine\UserFull\BossBulletFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\Bullet.cpp" />
+    <ClCompile Include="AustEngine\UserFull\BulletFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\Enemy.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBase.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBaseBullet.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBoss.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBossBullet.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBossFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBullet.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBulletFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyBaseFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyManager.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyManagerBaseState.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyManagerBossState.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyRam.cpp" />
+    <ClCompile Include="AustEngine\UserFull\EnemyRamFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\GodCam.cpp" />
+    <ClCompile Include="AustEngine\UserFull\LoseBG.cpp" />
+    <ClCompile Include="AustEngine\UserFull\LoseScene.cpp" />
+    <ClCompile Include="AustEngine\UserFull\PauseBG.cpp" />
+    <ClCompile Include="AustEngine\UserFull\PauseScene.cpp" />
+    <ClCompile Include="AustEngine\UserFull\RestartHack.cpp" />
+    <ClCompile Include="AustEngine\UserFull\StartBG.cpp" />
+    <ClCompile Include="AustEngine\UserFull\StartHack.cpp" />
+    <ClCompile Include="AustEngine\UserFull\StartScene.cpp" />
+    <ClCompile Include="AustEngine\UserFull\Tank.cpp" />
+    <ClCompile Include="AustEngine\UserFull\TankFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\TankManager.cpp" />
+    <ClCompile Include="AustEngine\UserFull\TankTurret.cpp" />
+    <ClCompile Include="AustEngine\UserFull\Tree.cpp" />
+    <ClCompile Include="AustEngine\UserFull\TreeFactory.cpp" />
+    <ClCompile Include="AustEngine\UserFull\TreeManager.cpp" />
+    <ClCompile Include="AustEngine\UserFull\UnpauseHack.cpp" />
+    <ClCompile Include="AustEngine\UserFull\WallPlane.cpp" />
+    <ClCompile Include="AustEngine\UserFull\WinBG.cpp" />
+    <ClCompile Include="AustEngine\UserFull\WinScene.cpp" />
+    <ClCompile Include="AustEngine\UserFull\WorldPlane.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram11.cd" />
+    <None Include="ClassDiagram12.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
